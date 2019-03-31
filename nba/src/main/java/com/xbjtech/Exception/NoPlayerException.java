@@ -1,7 +1,7 @@
 package com.xbjtech.Exception;
 /**
  * @author Ma Yucheng
- * @date 2019年3月31日 下午5:24:48
+ * @date 2019-3-31- 17:24:48
  * @version 1.0
  * @desc 球员库没有球员的异常
  */

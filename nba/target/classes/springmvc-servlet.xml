@@ -73,6 +73,8 @@
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
 	<!-- 配置静态文件不被dispacherServlet拦截 -->
-	<mvc:resources mapping="/static/**" location="/static/"></mvc:resources>
+	<!-- <mvc:resources mapping="/static/**" location="/static/"></mvc:resources> -->
+	
+	<mvc:default-servlet-handler/>
 
 </beans>

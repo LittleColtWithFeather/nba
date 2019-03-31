@@ -1,0 +1,13 @@
+/* »ù±¾CSSÅäÖÃ */
+@font-face {
+    font-family: matrix;
+    src: url('../font/MatrixBoldOldstyle.otf');
+}
+
+* {
+    font-family: matrix;
+}
+
+body{
+	font-family: matrix;
+}

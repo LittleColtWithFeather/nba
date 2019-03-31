@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xbjtech.mapper.PlayerMapper">
+
+	<select id="selectPlayerById" parameterType="int" resultType="com.xbjtech.model.Player">
+		select playerId, playerName, playerAge, playerHeight, playerTeam from t_players where playerId=#{playerId}
+	</select>
+	
+	<select id="getPlayers" resultType="com.xbjtech.model.Player">
+		select playerId, playerName, playerAge, playerHeight, playerTeam from t_players
+	</select>
+	
+	<insert id="addPlayer" parameterType="com.xbjtech.model.Player">
+		insert into t_players(playerName, playerAge, playerHeight, playerTeam) values(#{playerName}, #{playerAge}, #{playerHeight}, #{playerTeam})
+	</insert>
+	
+	<delete id="deletePlayerById" parameterType="int">
+		delete from t_players where playerId=#{playerId}
+	</delete>
+	
+	<update id="modifyPlayer" parameterType="com.xbjtech.model.Player">
+		update 
+			t_players 
+		set 
+			playerName=#{playerName},
+			playerAge=#{playerAge},
+			playerHeight=#{playerHeight},
+			playerTeam=#{playerTeam}
+		where
+			playerId=#{playerId}
+	</update>
+	
+</mapper>

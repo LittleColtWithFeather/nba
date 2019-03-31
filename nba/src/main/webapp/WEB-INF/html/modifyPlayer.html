@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Player Setting</title>
+    <link rel="stylesheet" href="/nba/static/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="/nba/static/css/base.css">
+</head>
+
+<body>
+    <div class="layui-row">
+        <div class="layui-col-md3" style="height: 10px;">
+        </div>
+        <div class="layui-col-md6">
+            <form class="layui-form" action="" style="margin-top: 100px;">
+            	<div class="layui-form-item" style="display:none;">
+                    <label class="layui-form-label">Player Id:</label>
+                    <div class="layui-input-block">
+                        <input type="hidden" name="playerId" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">Player Name:</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="playerName" required lay-verify="required|playerName" placeholder="Please enter player's name..." autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">Player Age:</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="playerAge" required lay-verify="required|playerAge" placeholder="Please enter player's age..." autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">Player Height:</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="playerHeight" required lay-verify="required|playerHeight" placeholder="Please enter player's height..." autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">Player Team:</label>
+                    <div class="layui-input-block">
+                        <select name="playerTeam" lay-verify="required">
+                            <option value="">Please choose player's team</option>
+                            <option value="Atlanta Hawks">Atlanta Hawks</option>
+                            <option value="Boston Celtics">Boston Celtics</option>
+                            <option value="Charlotte Hornets">Charlotte Hornets</option>
+                            <option value="Chicago Bulls">Chicago Bulls</option>
+                            <option value="Cleveland Cavaliers">Cleveland Cavaliers</option>
+                            <option value="Dallas Mavericks">Dallas Mavericks</option>
+                            <option value="Denver Nuggets">Denver Nuggets</option>
+                            <option value="Detroit Pistons">Detroit Pistons</option>
+                            <option value="Golden State Warriors">Golden State Warriors</option>
+                            <option value="Houston Rockets">Houston Rockets</option>
+                            <option value="Indiana Pacers">Indiana Pacers</option>
+                            <option value="Los Angeles Clippers">Los Angeles Clippers</option>
+                            <option value="Los Angeles Lakers">Los Angeles Lakers</option>
+                            <option value="Memphis Grizzlies">Memphis Grizzlies</option>
+                            <option value="Miami Heat">Miami Heat</option>
+                            <option value="Milwaukee Bucks">Milwaukee Bucks</option>
+                            <option value="Minnesota Timberwolves">Minnesota Timberwolves</option>
+                            <option value="New Jersey Nets">New Jersey Nets</option>
+                            <option value="New Orleans Pelicans">New Orleans Pelicans</option>
+                            <option value="New York Knicks">New York Knicks</option>
+                            <option value="Oklahoma City Thunder">Oklahoma City Thunder</option>
+                            <option value="Orlando Magic">Orlando Magic</option>
+                            <option value="Philadelphia 76ers">Philadelphia 76ers</option>
+                            <option value="Phoenix Suns">Phoenix Suns</option>
+                            <option value="Portland Trail Blazers">Portland Trail Blazers</option>
+                            <option value="Sacramento Kings">Sacramento Kings</option>
+                            <option value="San Antonio Spurs">San Antonio Spurs</option>
+                            <option value="Toronto Raptors">Toronto Raptors</option>
+                            <option value="Utah Jazz">Utah Jazz</option>
+                            <option value="Washington Wizards">Washington Wizards</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="submitform">submit</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-col-md3" style="height: 10px;">
+        </div>
+    </div>
+    <!-- 你的HTML代码 -->
+    <script src="/nba/static/layui/layui.js"></script>
+    <script src="/nba/static/jquery/jquery.js"></script>
+    <script src="/nba/static/js/ajax.js"></script>
+    <script src="/nba/static/js/others.js"></script>
+    
+    <script>
+    layui.config({
+        base: '/nba/static/res/js/modules/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('modifyPlayer'); //加载入口
+    </script>
+</body>
+
+</html>
